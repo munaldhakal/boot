@@ -6,7 +6,7 @@ public enum UserType {
 	 */
 	DISABLED,
 	/**
-	 * This denotes the noraml person
+	 * This denotes the normal person
 	 */
 	VOLUNTEER,
 	/**

@@ -20,6 +20,8 @@ public class UserDto implements Serializable {
 	private String contactPersonNo;
 	@NotNull(message="UserType is required")
 	private UserType userType;
+	private Double lat;
+	private Double lng;
 
 	public String getName() {
 		return name;
@@ -77,4 +79,20 @@ public class UserDto implements Serializable {
 		this.userType = userType;
 	}
 
+	public Double getLat() {
+		return lat;
+	}
+
+	public void setLat(Double lat) {
+		this.lat = lat;
+	}
+
+	public Double getLng() {
+		return lng;
+	}
+
+	public void setLng(Double lng) {
+		this.lng = lng;
+	}
+	
 }

@@ -23,7 +23,7 @@ import com.tech.pwds.boot.response.UserResponse;
 import com.tech.pwds.boot.service.UserService;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/v1/users")
 public class UserController {
 	@Autowired
 	UserService userService;
@@ -61,7 +61,7 @@ public class UserController {
 	}
 	@RequestMapping(value="/login",method = RequestMethod.POST)
 	public ResponseEntity<Object> loginUser(@RequestBody UserLoginRequest request) {
-		Long user=userService.loginUser(request);
+		User user=userService.loginUser(request);
 		return new ResponseEntity<Object>(user, HttpStatus.OK);
 	}
 	@RequestMapping(value="/logout/{id}",method = RequestMethod.PUT)
